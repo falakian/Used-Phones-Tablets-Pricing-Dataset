@@ -24,7 +24,6 @@ tab1(data$device_brand, sort.group = "decreasing", cum.percent = TRUE, main="ن�
 #  نمودار دایره ای فراوانی برند ها
 pie(tableBrand)
 
-
 # نمودار میله ای برای سیستم عامل ها
 
 tab1(data$os, sort.group = "decreasing", cum.percent = TRUE, main="نمودار میله ای سیستم عامل ها  ", ylab = "فراوانی", col=c("red"), border = "black")
@@ -254,6 +253,156 @@ hist(data$battery , breaks=10, main="نمودار مستطیلی ظرفیت ان
 # نمودار جعبه ای برای ظرفیت باتری
 
 boxplot(data$battery ,horizontal = TRUE,  main="نمودار جعبه ای مربوط به ظرفیت انرژی باتری دستگاه بر حسب میلی آمپر ساعت", xlab = "میلی آمپر ساعت", col=c("red"), border = "black")
+
+## برای وزن دستگاه بر حسب گرم
+
+# شاخص های مرکزگرا
+Average <- mean(data$weight , na.rm = T) # میانگین
+Median <- median(data$weight , na.rm = T) # میانه
+Mode <- mfv(data$weight )
+
+# شاخص های پراکندگی
+minimum <- min(data$weight , na.rm = T)#کم ترین
+
+maximum <- max(data$weight , na.rm = T)# بیشترین
+
+range <- range(data$weight , na.rm = T)# بازه
+
+standardDeviation <- sd(data$weight , na.rm = T) # انحراف معیار
+
+variance <- var(data$weight , na.rm = T) # واریانس
+
+# چاپ کردن شاخص های مرکزگرا و شاخص های پراکندگی
+
+cat ("داده های مربوط به وزن دستگاه بر حسب گرم", "\nمیانگین : ", Average, "\nمیانه : ", Median, "\nنما : ", Mode, "\nمینیمم : ", minimum, "\nماکسیمم : ", maximum, "\nرنج : ", range, "\nواریانس : ", variance, "\nانحراف معیار : ", standardDeviation)
+
+# نمودار مستطیلی با 10 رده برای وزن دستگاه بر حسب گرم
+
+hist(data$weight , breaks=10, main="نمودار مستطیلی وزن دستگاه بر حسب گرم", ylab = "فراوانی", xlab = "گرم", col=c("red"), border = "black" )
+
+# نمودار جعبه ای برای وزن دستگاه بر حسب گرم
+
+boxplot(data$weight ,horizontal = TRUE,  main="نمودار جعبه ای مربوط به وزن دستگاه بر حسب گرم", xlab = "گرم", col=c("red"), border = "black")
+
+## برای سالی که مدل دستگاه عرضه شد
+
+# شاخص های مرکزگرا
+Average <- mean(data$release_year , na.rm = T) # میانگین
+Median <- median(data$release_year , na.rm = T) # میانه
+Mode <- mfv(data$release_year )
+
+# شاخص های پراکندگی
+minimum <- min(data$release_year , na.rm = T)#کم ترین
+
+maximum <- max(data$release_year , na.rm = T)# بیشترین
+
+range <- range(data$release_year , na.rm = T)# بازه
+
+standardDeviation <- sd(data$release_year , na.rm = T) # انحراف معیار
+
+variance <- var(data$release_year , na.rm = T) # واریانس
+
+# چاپ کردن شاخص های مرکزگرا و شاخص های پراکندگی
+
+cat ("داده های مربوط به سالی که مدل دستگاه عرضه شد", "\nمیانگین : ", Average, "\nمیانه : ", Median, "\nنما : ", Mode, "\nمینیمم : ", minimum, "\nماکسیمم : ", maximum, "\nرنج : ", range, "\nواریانس : ", variance, "\nانحراف معیار : ", standardDeviation)
+
+# نمودار مستطیلی با 10 رده برای سالی که مدل دستگاه عرضه شد
+
+hist(data$release_year , breaks=10, main="نمودار مستطیلی سالی که مدل دستگاه عرضه شد", ylab = "فراوانی", xlab = "سال", col=c("red"), border = "black" )
+
+# نمودار جعبه ای برای سالی که مدل دستگاه عرضه شد
+
+boxplot(data$release_year ,horizontal = TRUE,  main="نمودار جعبه ای مربوط به سالی که مدل دستگاه عرضه شد", xlab = "سال", col=c("red"), border = "black")
+
+## برای تعداد روزهایی که دستگاه استفاده شده/بازسازی شده استفاده شده است
+
+# شاخص های مرکزگرا
+Average <- mean(data$days_used , na.rm = T) # میانگین
+Median <- median(data$days_used , na.rm = T) # میانه
+Mode <- mfv(data$days_used )
+
+# شاخص های پراکندگی
+minimum <- min(data$days_used , na.rm = T)#کم ترین
+
+maximum <- max(data$days_used , na.rm = T)# بیشترین
+
+range <- range(data$days_used , na.rm = T)# بازه
+
+standardDeviation <- sd(data$days_used , na.rm = T) # انحراف معیار
+
+variance <- var(data$days_used , na.rm = T) # واریانس
+
+# چاپ کردن شاخص های مرکزگرا و شاخص های پراکندگی
+
+cat ("داده های مربوط به تعداد روزهایی که دستگاه استفاده شده/بازسازی شده استفاده شده است", "\nمیانگین : ", Average, "\nمیانه : ", Median, "\nنما : ", Mode, "\nمینیمم : ", minimum, "\nماکسیمم : ", maximum, "\nرنج : ", range, "\nواریانس : ", variance, "\nانحراف معیار : ", standardDeviation)
+
+# نمودار مستطیلی با 10 رده برای تعداد روزهایی که دستگاه استفاده شده/بازسازی شده استفاده شده است
+
+hist(data$days_used , breaks=10, main="نمودار مستطیلی تعداد روزهایی که دستگاه استفاده شده/بازسازی شده استفاده شده است", ylab = "فراوانی", xlab = "تعداد", col=c("red"), border = "black" )
+
+# نمودار جعبه ای برای تعداد روزهایی که دستگاه استفاده شده/بازسازی شده استفاده شده است
+
+boxplot(data$days_used ,horizontal = TRUE,  main="نمودار جعبه ای مربوط به تعداد روزهایی که دستگاه استفاده شده/بازسازی شده استفاده شده است", xlab = "تعداد", col=c("red"), border = "black")
+
+## قیمت عادی یک دستگاه جدید از همان مدل
+
+# شاخص های مرکزگرا
+Average <- mean(data$normalized_new_price , na.rm = T) # میانگین
+Median <- median(data$normalized_new_price , na.rm = T) # میانه
+Mode <- mfv(data$normalized_new_price )
+
+# شاخص های پراکندگی
+minimum <- min(data$normalized_new_price , na.rm = T)#کم ترین
+
+maximum <- max(data$normalized_new_price , na.rm = T)# بیشترین
+
+range <- range(data$normalized_new_price , na.rm = T)# بازه
+
+standardDeviation <- sd(data$normalized_new_price , na.rm = T) # انحراف معیار
+
+variance <- var(data$normalized_new_price , na.rm = T) # واریانس
+
+# چاپ کردن شاخص های مرکزگرا و شاخص های پراکندگی
+
+cat ("داده های مربوط به قیمت عادی یک دستگاه جدید از همان مدل", "\nمیانگین : ", Average, "\nمیانه : ", Median, "\nنما : ", Mode, "\nمینیمم : ", minimum, "\nماکسیمم : ", maximum, "\nرنج : ", range, "\nواریانس : ", variance, "\nانحراف معیار : ", standardDeviation)
+
+# نمودار مستطیلی با 10 رده قیمت عادی یک دستگاه جدید از همان مدل
+
+hist(data$normalized_new_price , breaks=10, main="نمودار مستطیلی قیمت عادی یک دستگاه جدید از همان مدل", ylab = "فراوانی", xlab = "قیمت", col=c("red"), border = "black" )
+
+# نمودار جعبه ای قیمت عادی یک دستگاه جدید از همان مدل
+
+boxplot(data$normalized_new_price ,horizontal = TRUE,  main="نمودار جعبه ای مربوط به قیمت عادی یک دستگاه جدید از همان مدل", xlab = "قیمت", col=c("red"), border = "black")
+
+## قیمت عادی دستگاه استفاده شده/بازسازی شده
+
+# شاخص های مرکزگرا
+Average <- mean(data$normalized_used_price  , na.rm = T) # میانگین
+Median <- median(data$normalized_used_price  , na.rm = T) # میانه
+Mode <- mfv(data$normalized_used_price  )
+
+# شاخص های پراکندگی
+minimum <- min(data$normalized_used_price  , na.rm = T)#کم ترین
+
+maximum <- max(data$normalized_used_price  , na.rm = T)# بیشترین
+
+range <- range(data$normalized_used_price  , na.rm = T)# بازه
+
+standardDeviation <- sd(data$normalized_used_price  , na.rm = T) # انحراف معیار
+
+variance <- var(data$normalized_used_price  , na.rm = T) # واریانس
+
+# چاپ کردن شاخص های مرکزگرا و شاخص های پراکندگی
+
+cat ("داده های مربوط به قیمت عادی دستگاه استفاده شده/بازسازی شده", "\nمیانگین : ", Average, "\nمیانه : ", Median, "\nنما : ", Mode, "\nمینیمم : ", minimum, "\nماکسیمم : ", maximum, "\nرنج : ", range, "\nواریانس : ", variance, "\nانحراف معیار : ", standardDeviation)
+
+# نمودار مستطیلی با 10 رده قیمت عادی دستگاه استفاده شده/بازسازی شده
+
+hist(data$normalized_used_price  , breaks=10, main="نمودار مستطیلی قیمت عادی دستگاه استفاده شده/بازسازی شده", ylab = "فراوانی", xlab = "قیمت", col=c("red"), border = "black" )
+
+# نمودار جعبه ای قیمت عادی دستگاه استفاده شده/بازسازی شده
+
+boxplot(data$normalized_used_price  ,horizontal = TRUE,  main="نمودار جعبه ای مربوط به قیمت عادی دستگاه استفاده شده/بازسازی شده", xlab = "قیمت", col=c("red"), border = "black")
 
 ###########################################################
 #covariance <- cov(data$screen_size, data$battery)
