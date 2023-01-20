@@ -1,4 +1,4 @@
-mydata = read.csv("C:\\Users\\montazeri\\Desktop\\amar\\used_device_data.csv")
+mydata = read.csv("C:\\Users\\montazeri\\Desktop\\amar\\part_2\\used_device_data.csv")
 #محاسبه بازه 95 درصدی برای میانگین
 #محاسبه میانگین،تعداد اعضا و انحراف معیار
 tmp = mydata$battery
@@ -45,3 +45,6 @@ if (zt > zt1){
 } else{
   cat("فرض صفرم رد نمی شود")
 }
+#روش دوم برای انجام آزمون آماری
+test <- t.test(komaki, mu = mu0, level=0.95, alternative = "greater")
+
