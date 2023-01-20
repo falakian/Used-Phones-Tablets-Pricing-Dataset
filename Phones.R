@@ -52,11 +52,11 @@ pie(table4G)
 
 # نمودار میله ای برای دسترسی به فایو جی
 
-tab1(data$five_g, sort.group = "decreasing", cum.percent = TRUE, main=" 4G  ", ylab = "فراوانی", col=c("red"), border = "black")
+tab1(data$five_g, sort.group = "decreasing", cum.percent = TRUE, main=" 5G  ", ylab = "فراوانی", col=c("red"), border = "black")
 
 # نمودار میله ای برای دسترسی به فایو جی با درصد فراوانی
 
-tab1(data$five_g, sort.group = "decreasing", cum.percent = TRUE, main=" 4G  ",bar.values = "percent", ylab = "فراوانی", col=c("red"), border = "black")
+tab1(data$five_g, sort.group = "decreasing", cum.percent = TRUE, main=" 5G  ",bar.values = "percent", ylab = "فراوانی", col=c("red"), border = "black")
 
 table5G<-table(data$five_g)
 
@@ -70,6 +70,10 @@ pie(table5G)
 
 # شاخص های مرکزگرا
 
+summary(data$screen_size) #شاخص های مرکز گرا 
+
+
+# شاخص های مرکزگرا به صورت دستی
 Average <- mean(data$screen_size , na.rm = T) # میانگین
 
 Median <- median(data$screen_size , na.rm = T) # میانه
@@ -104,6 +108,10 @@ boxplot(data$screen_size,horizontal = TRUE,  main="نمودار جعبه ای م
 
 # شاخص های مرکزگرا
 
+summary(data$rear_camera_mp) #شاخص های مرکز گرا 
+
+
+# شاخص های مرکزگرا به صورت دستی
 Average <- mean(data$rear_camera_mp , na.rm = T) # میانگین
 
 Median <- median(data$rear_camera_mp , na.rm = T) # میانه
@@ -137,6 +145,11 @@ boxplot(data$rear_camera_mp,horizontal = TRUE,  main="نمودار جعبه ای
 ## برای دوربین جلو
 
 # شاخص های مرکزگرا
+
+summary(data$front_camera_mp) #شاخص های مرکز گرا 
+
+
+# شاخص های مرکزگرا به صورت دستی
 Average <- mean(data$front_camera_mp , na.rm = T) # میانگین
 Median <- median(data$front_camera_mp , na.rm = T) # میانه
 Mode <- mfv(data$front_camera_mp)
@@ -167,6 +180,11 @@ boxplot(data$front_camera_mp,horizontal = TRUE,  main="نمودار جعبه ا�
 ## برای مقدار حافظه داخلی
 
 # شاخص های مرکزگرا
+
+summary(data$internal_memory) #شاخص های مرکز گرا 
+
+
+# شاخص های مرکزگرا به صورت دستی
 Average <- mean(data$internal_memory , na.rm = T) # میانگین
 Median <- median(data$internal_memory , na.rm = T) # میانه
 Mode <- mfv(data$internal_memory)
@@ -197,6 +215,11 @@ boxplot(data$internal_memory,horizontal = TRUE,  main="نمودار جعبه ا�
 ## برای مقدار رم
 
 # شاخص های مرکزگرا
+
+summary(data$ram) #شاخص های مرکز گرا 
+
+
+# شاخص های مرکزگرا به صورت دستی
 Average <- mean(data$ram , na.rm = T) # میانگین
 Median <- median(data$ram , na.rm = T) # میانه
 Mode <- mfv(data$ram)
@@ -227,6 +250,11 @@ boxplot(data$ram,horizontal = TRUE,  main="نمودار جعبه ای مربوط
 ## برای ظرفیت باتری
 
 # شاخص های مرکزگرا
+
+summary(data$battery) #شاخص های مرکز گرا 
+
+
+# شاخص های مرکزگرا به صورت دستی
 Average <- mean(data$battery , na.rm = T) # میانگین
 Median <- median(data$battery , na.rm = T) # میانه
 Mode <- mfv(data$battery )
@@ -257,6 +285,11 @@ boxplot(data$battery ,horizontal = TRUE,  main="نمودار جعبه ای مر�
 ## برای وزن دستگاه بر حسب گرم
 
 # شاخص های مرکزگرا
+
+summary(data$weight) #شاخص های مرکز گرا 
+
+
+# شاخص های مرکزگرا به صورت دستی
 Average <- mean(data$weight , na.rm = T) # میانگین
 Median <- median(data$weight , na.rm = T) # میانه
 Mode <- mfv(data$weight )
@@ -287,6 +320,11 @@ boxplot(data$weight ,horizontal = TRUE,  main="نمودار جعبه ای مرب
 ## برای سالی که مدل دستگاه عرضه شد
 
 # شاخص های مرکزگرا
+
+summary(data$release_year) #شاخص های مرکز گرا 
+
+
+# شاخص های مرکزگرا به صورت دستی
 Average <- mean(data$release_year , na.rm = T) # میانگین
 Median <- median(data$release_year , na.rm = T) # میانه
 Mode <- mfv(data$release_year )
@@ -317,6 +355,11 @@ boxplot(data$release_year ,horizontal = TRUE,  main="نمودار جعبه ای 
 ## برای تعداد روزهایی که دستگاه استفاده شده/بازسازی شده استفاده شده است
 
 # شاخص های مرکزگرا
+
+summary(data$days_used) #شاخص های مرکز گرا 
+
+
+# شاخص های مرکزگرا به صورت دستی
 Average <- mean(data$days_used , na.rm = T) # میانگین
 Median <- median(data$days_used , na.rm = T) # میانه
 Mode <- mfv(data$days_used )
@@ -347,6 +390,11 @@ boxplot(data$days_used ,horizontal = TRUE,  main="نمودار جعبه ای م�
 ## قیمت عادی یک دستگاه جدید از همان مدل
 
 # شاخص های مرکزگرا
+
+summary(data$normalized_new_price) #شاخص های مرکز گرا 
+
+
+# شاخص های مرکزگرا به صورت دستی
 Average <- mean(data$normalized_new_price , na.rm = T) # میانگین
 Median <- median(data$normalized_new_price , na.rm = T) # میانه
 Mode <- mfv(data$normalized_new_price )
@@ -377,6 +425,11 @@ boxplot(data$normalized_new_price ,horizontal = TRUE,  main="نمودار جعب
 ## قیمت عادی دستگاه استفاده شده/بازسازی شده
 
 # شاخص های مرکزگرا
+
+summary(data$normalized_used_price) #شاخص های مرکز گرا 
+
+
+# شاخص های مرکزگرا به صورت دستی
 Average <- mean(data$normalized_used_price  , na.rm = T) # میانگین
 Median <- median(data$normalized_used_price  , na.rm = T) # میانه
 Mode <- mfv(data$normalized_used_price  )
